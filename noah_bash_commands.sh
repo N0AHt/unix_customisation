@@ -14,7 +14,7 @@ function cddev(){
 #very lazy way to keep on top of git commits and pushes
 function lazygit(){
 
-	$push = 0
+	PUSH = 0
 
 	git add .
 	echo "git add . [adding all files in repo]"
