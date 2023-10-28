@@ -15,12 +15,15 @@ function cddev(){
 function lazygit(){
 
 	git add .
+	echo "git add . :: adding all files"
 
 	if [ -z "$1" ] # Is parameter #1 zero length?
 		then
 		git commit -m "this is a lazy commit"
+		echo "git commit -m 'this ia a lazy commit'"
 	else
 		git commit -m "$*"
+		echo "git commit -m '$*'"
 	fi
 
 	while getopts "-p:" flag ; do
