@@ -43,7 +43,7 @@ function lazygit(){
 
 	echo "$push"
 
-	if [ "$push" -eq "yes" ]; #needs a space around brackets?? I hate bash
+	if [ "$push" = "yes" ]; #needs a space around brackets?? I hate bash
 		then
 		git push
 	fi
