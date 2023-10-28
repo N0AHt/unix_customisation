@@ -15,7 +15,7 @@ function cddev(){
 function lazygit(){
 
 	git add .
-	echo "git add . :: adding all files"
+	echo "git add . [adding all files in repo]"
 
 	if [ -z "$1" ] # Is parameter #1 zero length?
 		then
