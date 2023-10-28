@@ -15,6 +15,15 @@ function cddev(){
 function lazygit(){
 
 	TO_PUSH="1"
+	
+
+	if [[ "$*" == *"-p"* ]]
+		then
+    		echo "YES"
+	else
+    		echo "NO"
+	fi
+
 
 	git add .
 	echo "git add . [adding all files in repo]"
@@ -41,7 +50,7 @@ function lazygit(){
 
 	echo "$TO_PUSH"
 
-	if ["TO_PUSH" -eq "p"]
+	if ["$TO_PUSH" -eq "p"]
 		then
 		git push
 	fi
