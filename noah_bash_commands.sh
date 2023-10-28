@@ -1,6 +1,9 @@
 #!/bin/bash
 
 #custom functions for paninski lab server
+# add these lines to .bashrc file to add this file to bash source!
+	#noah custom commands
+	#source ~/code/github/unix_customisation/noah_bash_commands.sh
 
 #navigate to dev folder
 function cddev(){
