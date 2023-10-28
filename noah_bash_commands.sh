@@ -14,16 +14,21 @@ function cddev(){
 #very lazy way to keep on top of git commits and pushes
 function lazygit(){
 
+	push = 0
+
 	git add .
 	echo "git add . [adding all files in repo]"
 
 	for arg do
+		if [arg = "-p"]
+		then
+			push = 1
+		fi
+
   		shift
   		[ "$arg" = "-p" ] && continue
  		set -- "$@" "$arg"
 	done
-
-	printf '%s\n' "$@"
 
 	if [ -z "$1" ] # Is parameter #1 zero length?
 		then
@@ -34,13 +39,6 @@ function lazygit(){
 		echo "git commit -m '$*'"
 	fi
 
-	while getopts "-p:" flag ; do
-                case "${flag}" in 
-                        "-p")
-                                git push 
-                                ;;
-                esac
-        done
 }
 
 #alias lzg = "lazygit"
