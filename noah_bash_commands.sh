@@ -61,7 +61,7 @@ function jupy_instance(){
 
 #opens a detatched screen running a hupyter lab instance accessible to the internet in the correct directory and conda env 
 function jupy(){
-	
+
 	cd ~/code/;
 	conda activate jupy
 	screen -dmS "jupy_screen" jupyter lab --no-browser --ip 0.0.0.0
