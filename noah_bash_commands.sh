@@ -20,7 +20,7 @@ function lazygit(){
 	echo "git add . [adding all files in repo]"
 
 	for arg do
-		if [arg = "-p"]
+		if ["$arg" = "-p"]
 		then
 			set TO_PUSH = 1
 		fi
@@ -40,7 +40,7 @@ function lazygit(){
 	fi
 
 
-	if [TO_PUSH -eq 1]
+	if ["$TO_PUSH" -eq 1]
 		then
 		git push
 	fi
