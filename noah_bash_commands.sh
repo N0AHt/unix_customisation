@@ -14,7 +14,7 @@ function cddev(){
 #very lazy way to keep on top of git commits and pushes
 function lazygit(){
 
-	push = 0
+	$push = 0
 
 	git add .
 	echo "git add . [adding all files in repo]"
@@ -22,7 +22,7 @@ function lazygit(){
 	for arg do
 		if [arg = "-p"]
 		then
-			push = 1
+			$push = 1
 		fi
 
   		shift
@@ -39,9 +39,15 @@ function lazygit(){
 		echo "git commit -m '$*'"
 	fi
 
+
+	if [$push -eq 1]
+		then
+		git push
+	fi
+
 }
 
-#alias lzg = "lazygit"
+#alias lzg = "lazygit()"
 
 
 function jupy_instance(){
