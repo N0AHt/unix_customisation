@@ -34,7 +34,7 @@ function lazygit(){
 
 	if [ -z "$1" ] # Is parameter #1 zero length?
 		then
-		git commit -m "this is a lazy commit (automated -m)"
+		git commit -m "this lazy commit is from lazy git (automated message)"
 		#echo "git commit -m 'this lazy commit is from lazy git (automated message)'"
 	else
 		git commit -m "$*"
