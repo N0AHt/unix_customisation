@@ -14,7 +14,7 @@ function cddev(){
 #very lazy way to keep on top of git commits and pushes
 function lazygit(){
 
-	if [[ "$*" == *"-p"* ]]
+	if [[ "$*" == *"-p"* ]] #this is bad, can find a -p anywhere, should use case switching...
 		then
     		push="yes"
 	else
@@ -50,7 +50,7 @@ function lazygit(){
 
 }
 
-#alias lzg = "lazygit()"
+alias lzg="lazygit -p"
 
 
 function jupy_instance(){
