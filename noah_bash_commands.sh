@@ -14,12 +14,16 @@ function cddev(){
 #very lazy way to keep on top of git commits and pushes
 function lazygit(){
 
-	# TO_PUSH="np"
+	TO_PUSH="0"
 
 	git add .
 	echo "git add . [adding all files in repo]"
 
 	for arg do
+		if ["$arg" -eq "-p"]
+			then
+			TO_PUSH="1"
+		fi
 
   		shift
   		[ "$arg" = "-p" ] && continue
@@ -35,6 +39,7 @@ function lazygit(){
 		echo "git commit -m '$*'"
 	fi
 
+	echo "$TO_PUSH"
 
 	if ["TO_PUSH" -eq "p"]
 		then
