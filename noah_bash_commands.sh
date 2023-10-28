@@ -17,10 +17,18 @@ function lazygit(){
 	git add .
 	echo "git add . [adding all files in repo]"
 
+	for arg do
+  		shift
+  		[ "$arg" = "-p" ] && continue
+ 		set -- "$@" "$arg"
+	done
+
+	printf '%s\n' "$@"
+
 	if [ -z "$1" ] # Is parameter #1 zero length?
 		then
-		git commit -m "this is a lazy commit"
-		echo "git commit -m 'this ia a lazy commit'"
+		git commit -m "this is a lazy commit (automated -m)"
+		echo "git commit -m 'this is a lazy commit (automated -m)'"
 	else
 		git commit -m "$*"
 		echo "git commit -m '$*'"
