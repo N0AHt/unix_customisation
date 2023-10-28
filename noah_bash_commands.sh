@@ -41,7 +41,6 @@ function lazygit(){
 		echo "git commit -m '$*'"
 	fi
 
-	echo "$push"
 
 	if [ "$push" = "yes" ]; #needs a space around brackets?? I hate bash
 		then
