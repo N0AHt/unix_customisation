@@ -11,11 +11,36 @@ function cddev(){
 
 }
 
+#very lazy way to keep on top of git commits and pushes
+function lazygit(){
+
+	git add .
+
+	if [ -z "$1" ] # Is parameter #1 zero length?
+		then
+		git commit -m "this is a lazy commit"
+	else
+		git commit -m "$*"
+	fi
+
+	while getopts "-p:" flag ; do
+                case "${flag}" in 
+                        "-p")
+                                git push 
+                                ;;
+                esac
+        done
+}
+
+#alias lzg = "lazygit"
+
+
 function jupy_instance(){
 	cd ~/code/
 	conda activate jupy
 	jupyter lab --no-browser --ip 0.0.0.0
 }
+
 
 #opens a detatched screen running a hupyter lab instance accessible to the internet in the correct directory and conda env 
 function jupy(){
