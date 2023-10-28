@@ -43,7 +43,7 @@ function lazygit(){
 
 	echo "$push"
 
-	if ["$push"-eq"yes"]
+	if ["push" -eq "yes"];
 		then
 		git push
 	fi
