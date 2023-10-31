@@ -13,7 +13,7 @@ function cddev(){
 
 #very lazy way to keep on top of git commits and pushes
 function lazygit(){
-
+#https://superuser.com/questions/186272/check-if-any-of-the-parameters-to-a-bash-script-match-a-string
 	if [[ "$*" == *"-p"* ]] #this is bad, can find a -p anywhere, should use case switching...
 		then
     		push="yes"
