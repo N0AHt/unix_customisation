@@ -24,7 +24,7 @@ function lazygit(){
 
 	git add .
 	echo "git add . [adding all files in repo]"
-
+#https://unix.stackexchange.com/questions/258512/how-to-remove-a-positional-parameter-from
 	for arg do
 
   		shift
