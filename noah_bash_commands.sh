@@ -51,7 +51,7 @@ function lazygit(){
 
 alias lzg="lazygit -p"
 
-alias rm="mv ~/.trash"
+alias rm="rm -i"
 
 
 function jupy_instance(){
