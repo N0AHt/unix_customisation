@@ -51,6 +51,8 @@ function lazygit(){
 
 alias lzg="lazygit -p"
 
+alias rm="mv ~/.trash"
+
 
 function jupy_instance(){
 	cd ~/code/
