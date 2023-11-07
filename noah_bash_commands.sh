@@ -61,7 +61,7 @@ function jupy_instance(){
 }
 
 
-#opens a detatched screen running a hupyter lab instance accessible to the internet in the correct directory and conda env
+#opens a detatched screen running a jupyter lab instance accessible to the internet in the correct directory and conda env
 function jupy(){
 
 	cd ~/code/;
