@@ -52,7 +52,7 @@ function lazygit(){
 alias lzg="lazygit -p"
 
 #alias rm="rm -i"
-
+alias jpk="jupy_kill"
 
 function jupy_instance(){
 	cd ~/code/
@@ -69,4 +69,14 @@ function jupy(){
 	screen -dmS "jupy_screen" jupyter lab --no-browser --ip 0.0.0.0
 	conda deactivate
 	cd -;
+	echo "jupyter lab running on screen 'jupy_screen'"
 };
+
+function jupy_kill(){
+	#kill jupyter instance and close screen
+	screen -S jupy_screen -X stuff $'\003'
+	screen -S jupy_screen -X stuff $'\003'
+	#https://stackoverflow.com/questions/16001578/sending-ctrl-c-to-specific-screen-session#:~:text=Screen's%20stuff%20command%20also%20supports,used%20to%20send%20CTRL%2DC%20.&text=screen%20%2DS%20session_name%20%2DX%20at%20%22%23%22%20stuff%20%24,quit%20works%20perfect%20for%20me.
+	#need to send command twice to confirm killing kernel, cont figure out how to do on one line :/
+	echo "Jupyter instance shut down, screen killed"
+}
