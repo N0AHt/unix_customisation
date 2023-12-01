@@ -66,7 +66,7 @@ function jupy(){
 
 	cd ~/code/;
 	conda activate jupy
-	screen -dmS "jupy_screen" jupyter lab --no-browser --ip 0.0.0.0
+	screen -dmS "jupy_screen" jupyter lab --no-browser --ip=0.0.0.0 --port=8890 
 	conda deactivate
 	cd -;
 	echo "jupyter lab running on screen 'jupy_screen'"
